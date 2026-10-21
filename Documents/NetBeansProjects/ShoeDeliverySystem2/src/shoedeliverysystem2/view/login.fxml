@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="550.0" prefWidth="850.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shoedeliverysystem2.controller.LoginController">
+   <children>
+      <StackPane AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <GridPane style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 0);">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="40.0" />
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="60.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #0f172a; -fx-background-radius: 20 0 0 20;">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <Circle fill="TRANSPARENT" radius="60.0" stroke="#0ea5e9" strokeWidth="3.0" />
+                              <Text fill="WHITE" text="AHD">
+                                 <font><Font name="System Bold" size="42.0" /></font>
+                              </Text>
+                           </children>
+                        </StackPane>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Text fill="WHITE" text="SHOES DELIVERY">
+                                 <font><Font name="System Bold" size="18.0" /></font>
+                              </Text>
+                              <Text fill="#64748b" text="Fast. Reliable. Style.">
+                                 <font><Font size="14.0" /></font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+
+                  <AnchorPane style="-fx-background-color: white; -fx-background-radius: 0 20 20 0;" GridPane.columnIndex="1">
+                     <children>
+                        <Button onAction="#handleExit" prefHeight="35.0" prefWidth="55.0" 
+                                style="-fx-background-color: #ff4d4d; -fx-text-fill: white; -fx-background-radius: 0 20 0 15; -fx-cursor: hand; -fx-font-weight: bold;" 
+                                text="✕" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font><Font size="14.0" /></font>
+                        </Button>
+                        
+                        <VBox layoutX="80.0" layoutY="60.0" spacing="20.0">
+                           <children>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Text fill="#0f172a" text="Portal Access">
+                                       <font><Font name="System Bold" size="32.0" /></font>
+                                    </Text>
+                                    <Text fill="#64748b" text="Please enter your credentials to continue." />
+                                 </children>
+                              </VBox>
+                              
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Label text="USERNAME" textFill="#475569" />
+                                    <TextField fx:id="usernameField" prefHeight="45.0" prefWidth="320.0" promptText="Enter username" style="-fx-background-radius: 8;" />
+                                    
+                                    <Label text="PASSWORD" textFill="#475569" />
+                                    <PasswordField fx:id="passwordField" prefHeight="45.0" promptText="••••••••" style="-fx-background-radius: 8;" />
+                                    
+                                    <Label fx:id="errorLabel" wrapText="true" prefWidth="320.0" />
+
+                                    <VBox spacing="10.0" alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="loginButton" onAction="#handleLogin" prefHeight="50.0" prefWidth="320.0" 
+                                                  style="-fx-background-color: #0f172a; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" 
+                                                  text="Login">
+                                              <font><Font size="16.0" /></font>
+                                          </Button>
+                                          
+                                          <HBox alignment="CENTER" spacing="5.0">
+                                             <children>
+                                                <Text fill="#64748b" text="Don't have an account?" />
+                                                <Button onAction="#handleRegister" style="-fx-background-color: transparent; -fx-text-fill: #0ea5e9; -fx-cursor: hand; -fx-padding: 0;" text="Create Account" underline="true" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

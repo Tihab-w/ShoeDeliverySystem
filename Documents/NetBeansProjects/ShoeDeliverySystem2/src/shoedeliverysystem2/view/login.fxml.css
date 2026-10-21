@@ -1,0 +1,27 @@
+.login-button {
+    -fx-background-color: #0f172a;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.login-button:hover {
+    -fx-background-color: #1e293b;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.exit-button {
+    -fx-background-color: #ff4d4d;
+    -fx-text-fill: white;
+    -fx-background-radius: 0 20 0 10;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.exit-button:hover {
+    -fx-background-color: #ef4444;
+}

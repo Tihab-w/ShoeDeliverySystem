@@ -1,0 +1,63 @@
+/* Main Container */
+.root {
+    -fx-background-color: #f8fafc;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    -fx-background-color: #0f172a;
+    -fx-padding: 20;
+}
+
+.brand-text {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+}
+
+/* Table Styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f1f5f9;
+}
+
+/* Search Field */
+.search-field {
+    -fx-background-radius: 20;
+    -fx-padding: 8 15;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 20;
+}
+
+/* Buttons */
+.btn-buy {
+    -fx-background-color: #0ea5e9;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.btn-buy:hover {
+    -fx-background-color: #0284c7;
+}
+
+.btn-logout {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0ea5e9;
+    -fx-cursor: hand;
+    -fx-underline: true;
+}
+
+.btn-exit {
+    -fx-background-color: #ff4d4d;
+    -fx-text-fill: white;
+    -fx-background-radius: 0 0 0 15;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}

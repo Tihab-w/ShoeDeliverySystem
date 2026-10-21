@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shoedeliverysystem2.controller.AdminOrderController">
+   <children>
+      <VBox spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+               <children>
+                  <Button onAction="#handleBack" text="⬅ Back to Inventory" style="-fx-background-color: #444; -fx-text-fill: white;" />
+                  <Text text="Customer Orders Management" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+               </children>
+            </HBox>
+            
+            <TableView fx:id="ordersTable" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="orderIdCol" text="Order ID" prefWidth="80" />
+                  <TableColumn fx:id="customerCol" text="Customer" prefWidth="150" />
+                  <TableColumn fx:id="shoeCol" text="Shoe Model" prefWidth="150" />
+                  <TableColumn fx:id="quantityCol" text="Qty" prefWidth="70" />
+                  <TableColumn fx:id="totalCol" text="Total Price" prefWidth="120" />
+                  <TableColumn fx:id="statusCol" text="Status" prefWidth="120" />
+               </columns>
+            </TableView>
+            
+            <HBox spacing="10.0" alignment="CENTER_RIGHT">
+               <children>
+                  <Button onAction="#handleCompleteOrder" text="✅ Mark as Delivered" style="-fx-background-color: #28a745; -fx-text-fill: white;" />
+                  <Button onAction="#handleCancelOrder" text="❌ Cancel Order" style="-fx-background-color: #dc3545; -fx-text-fill: white;" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
